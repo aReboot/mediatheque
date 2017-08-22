@@ -11,15 +11,32 @@ and open the template in the editor.
 /*    Mise en page du site de la mediatheque    */
 
 
-     div{
+    body
+    {
+        background-color: azure;
+    }
+
+    div
+    {
         box-sizing: border-box;
-        }
+    }
 
-
+        
+    #titrePage
+    {
+        background-color:#fb9109;   
+    }
+        
+        
     #titrePageMediatheque
     {
-    background-color:#fb9109; 
-    margin-bottom: 20px;
-    text-align: center;
-    padding-bottom: 20px;
+        background-color:#fb9109; 
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    
+    #panelHorraireMediatheque
+    {
+        text-align: center;
     }
