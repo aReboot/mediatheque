@@ -16,9 +16,12 @@
         <p:menubar id="menu">
           <p:menuitem value="acceuil" icon="ui-icon-home" outcome="index.xhtml" />
           <p:menuitem value="panier" icon="ui-icon-cart" outcome="panier.xhtml" />
+          <!-- bouton admin
           <p:menuitem id="buttonAdmin" icon="ui-icon-gear" value="Admin" outcome="realm/admin/gestion"
                       rendered="#{controllerConnexion.checkIfAdmin()}"/>
+          -->
           <f:facet name="options">
+            <!-- choix
             <c:choose>
               <c:when id="test" test="#{controllerConnexion.testUtilisateur()}">
                 <h:outputText value="Utilisateur connecté : #{controllerConnexion.utilisateur.pseudo} " />
@@ -27,13 +30,16 @@
                                  update="@all" />
               </c:when>
               <c:otherwise>
-                <p:inputText style="margin-right: 10px" placeholder="Pseudo" value="#{controllerConnexion.pseudo}" />
-                <p:password style="margin-right: 10px" placeholder="Mot de passe" value="#{controllerConnexion.mdp}" />
+            -->
+                <p:inputText style="margin-right: 10px" placeholder="Pseudo" value="" />
+                <p:password style="margin-right: 10px" placeholder="Mot de passe" value="" />
                 <p:commandButton id="buttonConnexion" value="Connexion" icon="ui-icon-gear"
-                                 oncomplete="#{controllerConnexion.connexionRealm()}"
-                                 actionListener="#{controllerConnexion.connexionRealm()}" update="@all" />
+                                 oncomplete=""
+                                 actionListener="" update="@all" />
+               <!-- 
               </c:otherwise>
             </c:choose>
+               -->
           </f:facet>
         </p:menubar>
       </h:form>
