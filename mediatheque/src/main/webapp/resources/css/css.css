@@ -8,3 +8,18 @@ and open the template in the editor.
     Author     : aller
 */
 
+/*    Mise en page du site de la mediatheque    */
+
+
+     div{
+        box-sizing: border-box;
+        }
+
+
+    #titrePageMediatheque
+    {
+    background-color:#fb9109; 
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    }
