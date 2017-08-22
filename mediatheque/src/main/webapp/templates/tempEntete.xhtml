@@ -15,7 +15,6 @@
         <p:growl id="growlEntete" />
         <p:menubar id="menu">
           <p:menuitem value="acceuil" icon="ui-icon-home" outcome="index.xhtml" />
-          <p:menuitem value="panier" icon="ui-icon-cart" outcome="panier.xhtml" />
           <!-- bouton admin
           <p:menuitem id="buttonAdmin" icon="ui-icon-gear" value="Admin" outcome="realm/admin/gestion"
                       rendered="#{controllerConnexion.checkIfAdmin()}"/>
@@ -33,9 +32,7 @@
             -->
                 <p:inputText style="margin-right: 10px" placeholder="Pseudo" value="" />
                 <p:password style="margin-right: 10px" placeholder="Mot de passe" value="" />
-                <p:commandButton id="buttonConnexion" value="Connexion" icon="ui-icon-gear"
-                                 oncomplete=""
-                                 actionListener="" update="@all" />
+                <p:commandButton id="buttonConnexion" value="Connexion" icon="ui-icon-gear" />
                <!-- 
               </c:otherwise>
             </c:choose>
