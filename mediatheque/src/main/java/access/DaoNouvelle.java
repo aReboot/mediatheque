@@ -6,12 +6,13 @@
 package access;
 
 import javax.ejb.Stateless;
+import model.Nouvelle;
 
 /**
  *
  * @author Adrien
  */
 @Stateless
-public class DaoEmprunter extends DaoAbstract<DaoEmprunter, Integer>{
+public class DaoNouvelle extends DaoAbstract<Nouvelle, Integer>{
     
 }

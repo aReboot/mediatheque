@@ -5,12 +5,14 @@
  */
 package access;
 
+import javax.ejb.Stateless;
 import model.Categorie;
 
 /**
  *
  * @author Adrien
  */
+@Stateless
 public class DaoCategorie extends DaoAbstract<Categorie, Integer> {
     
 }

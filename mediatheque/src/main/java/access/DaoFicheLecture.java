@@ -5,12 +5,14 @@
  */
 package access;
 
+import javax.ejb.Stateless;
 import model.Fichelecture;
 
 /**
  *
  * @author Adrien
  */
+@Stateless
 public class DaoFicheLecture extends DaoAbstract<Fichelecture, Integer>{
     
 }

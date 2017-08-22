@@ -5,12 +5,14 @@
  */
 package access;
 
+import javax.ejb.Stateless;
 import model.Utilisateur;
 
 /**
  *
  * @author Adrien
  */
+@Stateless
 public class DaoUtillisateur extends DaoAbstract<Utilisateur, Integer>{
     
 }
