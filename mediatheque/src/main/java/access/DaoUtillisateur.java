@@ -15,4 +15,7 @@ import model.Utilisateur;
 @Stateless
 public class DaoUtillisateur extends DaoAbstract<Utilisateur, Integer>{
     
+    public Utilisateur findByPseudo(String pseudo) {
+        return em.createNamedQuery(getClass().getSimpleName() + ".findByPseudo", entityClass).getSingleResult();
+    }
 }
