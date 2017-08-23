@@ -37,7 +37,7 @@
 
         <h:form id="ringImage">
             <div id="ringAffichageContenuMediatheque">
-                <p:ring id="ringContenu" value="#{display.allDocuments}" var="contenu" styleClass="image-ring" easing="easeInOutBack" autoplay="true" autoplayDuration="3000">
+                <p:ring id="ringContenu" value="#{display.allDocuments}" var="contenu" styleClass="image-ring" easing="easeInOutBack">
                     <p:graphicImage id="imgContenuMediatheque" library="img" name="#{contenu.urlImage}" width="200" height="200"/>
                 </p:ring>
             </div>
