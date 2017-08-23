@@ -71,8 +71,9 @@ public void setSelectDocument(Document selectDocument){
         return daoNouvelle.findAll();
     }
     
-    public Document getSelectDocument(){
+    public Document RetrieveSelectDocument(){
         return selectDocument;
     }
     
 }
+
