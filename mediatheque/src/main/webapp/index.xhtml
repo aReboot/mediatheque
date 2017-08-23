@@ -20,7 +20,9 @@
         -->
 
         <div id="titrePage">
-            <p:panel id="titrePageMediatheque" header="Mediatheque de Quétigny" style="background-color: #fb9109">
+            <p:panel id="titrePageMediatheque">
+                <h:outputText value="Mediatheque de Quetigny">
+                </h:outputText>
             </p:panel>
         </div>  
 
@@ -33,13 +35,13 @@
             </p:panel>
         </div>
 
-        <!--
+        
         <div id="ringAffichageContenuMediatheque">
-            <p:ring id="ringContenu" value="" var="contenu" styleClass="image-ring" easing="easeInOutBack">
-                <p:graphicImage id="imgContenuMediatheque" name=""/>
+            <p:ring id="ringContenu" value="#{display.allDocuments}" var="contenu" styleClass="image-ring" easing="easeInOutBack">
+                <p:graphicImage id="imgContenuMediatheque" name="resources/img"/>
             </p:ring>
         </div>
-        -->
+        
 
 
     </h:body>
