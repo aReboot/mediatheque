@@ -42,4 +42,7 @@ and open the template in the editor.
     }
     
     
- 
+    #ringAffichageContenuMediatheque
+    {
+        text-align: center;
+    }
