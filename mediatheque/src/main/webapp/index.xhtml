@@ -37,13 +37,11 @@
 
         <h:form id="ringImage">
             <div id="ringAffichageContenuMediatheque">
-                <p:ring id="ringContenu" value="#{display.allDocuments}" var="contenu" styleClass="image-ring" easing="easeInOutBack" autoplay="true" autoplayDuration="3000">
-                     
-                        <p:commandButton  icon="ui-icon-search" title="View" oncomplete="PF('carDialog').show();">
-                        </p:commandButton>
-
-                        <p:graphicImage id="imgContenuMediatheque" library="img" name="#{contenu.urlImage}" width="200" height="200"/>
-
+                <p:ring id="ringContenu" value="#{display.allDocuments}" var="contenu" styleClass="image-ring" easing="easeInOutBack" autoplay="true" autoplayDuration="5000">
+                    <p:graphicImage id="imgContenuMediatheque" library="img" name="#{contenu.urlImage}" width="200" height="200"/>
+                    <p:commandButton  icon="ui-icon-search" title="View" oncomplete="PF('carDialog').show();" style="background-color:#fb9109">
+                        <f:setPropertyActionListener value="#{contenu}" target="#{display.selectDocument}" />
+                    </p:commandButton>
                 </p:ring>
             </div>
         </h:form>
