@@ -10,7 +10,7 @@
     </h:head>
     <h:body>
         
-        <link href="resources/css/css.css" rel="stylesheet" type="text/css"/>
+        <h:outputStylesheet library="css" name="css.css" />
         
         <!--
         <p:growl id="growl" showDetail="true" sticky="true"/>
@@ -35,13 +35,13 @@
             </p:panel>
         </div>
 
-        
-        <div id="ringAffichageContenuMediatheque">
-            <p:ring id="ringContenu" value="#{display.allDocuments}" var="contenu" styleClass="image-ring" easing="easeInOutBack">
-                <p:graphicImage id="imgContenuMediatheque" name="resources/img/#{display.allDocuments}"/>
-            </p:ring>
-        </div>
-        
+        <h:form id="ringImage">
+            <div id="ringAffichageContenuMediatheque">
+                <p:ring id="ringContenu" value="#{display.allDocuments}" var="contenu" styleClass="image-ring" easing="easeInOutBack">
+                    <p:graphicImage id="imgContenuMediatheque" library="img" name="#{contenu.urlImage}" width="200" height="200"/>
+                </p:ring>
+            </div>
+        </h:form>
 
 
     </h:body>
