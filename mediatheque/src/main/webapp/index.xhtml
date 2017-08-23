@@ -9,9 +9,9 @@
         <title>Mediatheque de Quétigny</title>
     </h:head>
     <h:body>
-        
+
         <h:outputStylesheet library="css" name="css.css" />
-        
+
         <!--
         <p:growl id="growl" showDetail="true" sticky="true"/>
         <ui:insert name="entete">
@@ -37,10 +37,23 @@
 
         <h:form id="ringImage">
             <div id="ringAffichageContenuMediatheque">
-                <p:ring id="ringContenu" value="#{display.allDocuments}" var="contenu" styleClass="image-ring" easing="easeInOutBack" autoplay="true" autoplayDuration="3000">
+                <p:ring id="ringContenu" value="#{display.allDocuments}" var="contenu" styleClass="image-ring" easing="easeInOutBack" autoplay="true" autoplayDuration="5000">
                     <p:graphicImage id="imgContenuMediatheque" library="img" name="#{contenu.urlImage}" width="200" height="200"/>
+                    <p:commandButton id="boutonLoupe" update=":ringImage:contenuDetail"  icon="ui-icon-search" title="View" oncomplete="PF('contenuDialog').show();" style="background-color: #fb9109">
+                        <f:setPropertyActionListener value="#{contenu}" target="#{display.retrieveSelectDocument}" />
+                    </p:commandButton>
                 </p:ring>
             </div>
+
+            <p:dialog header="Detail" widgetVar="contenuDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
+               
+                 <p:outputPanel id="contenuDetail" style="text-align:center;" layout="block">
+                                <p:panel>
+                                     
+                    </p:panel>
+                </p:outputPanel>
+            </p:dialog>
+
         </h:form>
         
         <br />
