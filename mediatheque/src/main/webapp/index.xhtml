@@ -9,9 +9,9 @@
         <title>Mediatheque de Quétigny</title>
     </h:head>
     <h:body>
-        
+
         <h:outputStylesheet library="css" name="css.css" />
-        
+
         <!--
         <p:growl id="growl" showDetail="true" sticky="true"/>
         <ui:insert name="entete">
@@ -38,7 +38,12 @@
         <h:form id="ringImage">
             <div id="ringAffichageContenuMediatheque">
                 <p:ring id="ringContenu" value="#{display.allDocuments}" var="contenu" styleClass="image-ring" easing="easeInOutBack" autoplay="true" autoplayDuration="3000">
-                    <p:graphicImage id="imgContenuMediatheque" library="img" name="#{contenu.urlImage}" width="200" height="200"/>
+                     
+                        <p:commandButton  icon="ui-icon-search" title="View" oncomplete="PF('carDialog').show();">
+                        </p:commandButton>
+
+                        <p:graphicImage id="imgContenuMediatheque" library="img" name="#{contenu.urlImage}" width="200" height="200"/>
+
                 </p:ring>
             </div>
         </h:form>

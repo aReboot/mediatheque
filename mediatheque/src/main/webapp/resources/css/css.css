@@ -11,38 +11,38 @@ and open the template in the editor.
 /*    Mise en page du site de la mediatheque    */
 
 
-    body
-    {
-        background-color: azure;
-    }
+body
+{
+    background-color: azure;
+}
 
-    div
-    {
-        box-sizing: border-box;
-    }
+div
+{
+    box-sizing: border-box;
+}
 
-        
-    #titrePage
-    {
-        background-color:#fb9109;   
-    }
-        
-        
-    #titrePageMediatheque
-    {
-        background-color:#fb9109; 
-        text-align: center;
-        margin-bottom: 5px;
-    }
-    
-    
-    #panelHorraireMediatheque
-    {
-        text-align: center;
-    }
-    
-    
-    #ringAffichageContenuMediatheque
-    {
-        text-align: center;
-    }
+
+#titrePage
+{
+    background-color:#fb9109;   
+}
+
+
+#titrePageMediatheque
+{
+    background-color:#fb9109; 
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+#panelHorraireMediatheque
+{
+    text-align: center;
+}
+
+
+#ringAffichageContenuMediatheque
+{
+    text-align: center;
+}
