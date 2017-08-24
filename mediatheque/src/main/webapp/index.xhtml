@@ -97,8 +97,8 @@
                 <p:fieldset id="availableNouvelleField" legend="Nouvelles">
                     <p:dataTable id="availableNouvelle" var="nouvelle" value="#{display.allNouvelles}" selectionMode="single" selection="#{display.selectNouvelle}"  rowKey="#{nouvelle.idNouvelle}" >
         
-                               <p:ajax event="rowSelect" listener="#{Display.onRowSelect}" update="nouvelleForm:availableNouvelle,growl" />
-                        <p:ajax event="rowUnselect" listener="#{Display.onRowUnselect}" update="nouvelleForm:availableNouvelle,growl" />
+                        <p:ajax event="rowSelect" listener="#{display.onRowSelect()}" update="nouvelleForm:availableNouvelle,growl" />
+                        <p:ajax event="rowUnselect" listener="#{display.onRowUnselect()}" update="nouvelleForm:availableNouvelle,growl" />
                         
                 <p:column headerText="Date">
                     <h:outputText value="#{nouvelle.dateNouvelle}" />

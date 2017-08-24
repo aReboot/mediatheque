@@ -66,7 +66,7 @@ public void setSelectNouvelle (Nouvelle selectNouvelle){
     }
  
     
-   public void onRowUnselect(UnselectEvent event) throws IOException {
+   public void onRowUnselect() throws IOException {
         external = FacesContext.getCurrentInstance().getExternalContext();
          external.redirect("faces/ficheNouvelle.xhtml");
    }
