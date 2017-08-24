@@ -29,13 +29,6 @@ public class UserConnexion implements Serializable {
     private Utilisateur currentUser;
     private String inputPseudo;
     private String inputPassword;
-    private String inputFirstName;
-    private String inputSecondName;
-    private String inputBirthDate;
-    private String inputPostalCode;
-    private String inputEmail;
-    private String inputStreetNumber;
-    private String inputStreetName;
     private String EncryptedPassword;
     
     public String connexion() throws NoSuchAlgorithmException {
@@ -67,14 +60,17 @@ public class UserConnexion implements Serializable {
         return daoUtillisateur.findByPseudo(inputPseudo);
     }
     
-    public void insertUser() {
-        
+    public void insertUser() throws NoSuchAlgorithmException {
+        encryptPassword();
+        currentUser.setMotPasse(EncryptedPassword);
+        currentUser.setGroupe("default");
+        daoUtillisateur.save(currentUser);
     }
     
     public Utilisateur getCurrentUser() {
         return currentUser;
     }
-
+ 
     public void setCurrentUser(Utilisateur currentUser) {
         this.currentUser = currentUser;
     }
@@ -94,61 +90,5 @@ public class UserConnexion implements Serializable {
     public void setInputPassword(String inputPassword) {
         this.inputPassword = inputPassword;
     }
-
-    public String getInputFirstName() {
-        return inputFirstName;
-    }
-
-    public void setInputFirstName(String inputFirstName) {
-        this.inputFirstName = inputFirstName;
-    }
-
-    public String getInputSecondName() {
-        return inputSecondName;
-    }
-
-    public void setInputSecondName(String inputSecondName) {
-        this.inputSecondName = inputSecondName;
-    }
-
-    public String getInputBirthDate() {
-        return inputBirthDate;
-    }
-
-    public void setInputBirthDate(String inputBirthDate) {
-        this.inputBirthDate = inputBirthDate;
-    }
-
-    public String getInputPostalCode() {
-        return inputPostalCode;
-    }
-
-    public void setInputPostalCode(String inputPostalCode) {
-        this.inputPostalCode = inputPostalCode;
-    }
-
-    public String getInputEmail() {
-        return inputEmail;
-    }
-
-    public void setInputEmail(String inputEmail) {
-        this.inputEmail = inputEmail;
-    }
-
-    public String getInputStreetNumber() {
-        return inputStreetNumber;
-    }
-
-    public void setInputStreetNumber(String inputStreetNumber) {
-        this.inputStreetNumber = inputStreetNumber;
-    }
-
-    public String getInputStreetName() {
-        return inputStreetName;
-    }
-
-    public void setInputStreetName(String inputStreetName) {
-        this.inputStreetName = inputStreetName;
-    }
-
+    
 }

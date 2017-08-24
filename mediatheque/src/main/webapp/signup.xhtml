@@ -39,8 +39,8 @@
                     <p:inputText value="#{userConnexion.inputPassword}" />
                 </p:panelGrid>
                 <p:commandButton value="Inscription" 
-                                 actionListener="#{controllerConnexion.insertUtilisateur()}"
-                                 action="panier.xhtml" />
+                                 actionListener="#{userConnexion.insertUser()}"
+                                 action="login.xhtml" />
             </p:panel>
         </h:form>
     </h:body>
