@@ -40,22 +40,50 @@
                 <p:ring id="ringContenu" value="#{display.allDocuments}" var="contenu" styleClass="image-ring" easing="easeInOutBack" autoplay="true" autoplayDuration="5000">
                     <p:graphicImage id="imgContenuMediatheque" library="img" name="#{contenu.urlImage}" width="200" height="200"/>
                     <p:commandButton id="boutonLoupe" update=":ringImage:contenuDetail"  icon="ui-icon-search" title="View" oncomplete="PF('contenuDialog').show();" style="background-color: #fb9109">
-                        <f:setPropertyActionListener value="#{contenu}" target="#{display.retrieveSelectDocument}" />
+                        <f:setPropertyActionListener value="#{contenu}" target="#{display.selectDocument}" />
                     </p:commandButton>
                 </p:ring>
             </div>
 
-            <p:dialog header="Detail" widgetVar="contenuDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
-               
+            
+            
+            <p:dialog header="Detail" widgetVar="contenuDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false" style="color: #fb9109">
+
                  <p:outputPanel id="contenuDetail" style="text-align:center;" layout="block">
-                                <p:panel>
-                                     
-                    </p:panel>
+                    
+                    <p:panelGrid columns="2">
+
+                    
+                        <h:outputText value="Titre:" />
+                        <h:outputText value="#{display.selectDocument.titre}"/>
+                    
+                    
+                        <h:outputText value="Auteur:" />
+                        <h:outputText value="#{display.selectDocument.auteur}"/>
+                    
+                    
+                        <h:outputText value="Editeur:" />
+                        <h:outputText value="#{display.selectDocument.editeur}"/>
+                   
+                    
+                    
+                        <h:outputText value="Description:" />
+                        <h:outputText value="#{display.selectDocument.description}"/>
+                    
+                    
+                        <h:outputText value="Statut:" />
+                        <h:outputText value="#{display.selectDocument.statut}"/>
+                   
+                    </p:panelGrid>
+                     <br />
+                    <p:commandButton id="boutonRetour" update=":ringImage:contenuDetail"  value="Retour" title="View" oncomplete="PF('contenuDialog').hide();" style="background-color: #09ff6d ">
+                    </p:commandButton>
+                    
                 </p:outputPanel>
             </p:dialog>
 
         </h:form>
-        
+
         <br />
         <p:link outcome="login" value="login" />
     </h:body>
