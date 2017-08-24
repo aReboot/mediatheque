@@ -33,8 +33,8 @@ public class Display implements Serializable {
     private DaoNouvelle daoNouvelle;
     
     private Document selectDocument;
-
-
+    private Nouvelle selectNouvelle;
+    
 /*
 *########################################################################################
 #########################################################################################
@@ -49,7 +49,9 @@ public void setSelectDocument(Document selectDocument){
 }
 
 
-
+public void setSelectNouvelle (Nouvelle selectNouvelle){
+    this.selectNouvelle=selectNouvelle;
+}
     
     
 /*
@@ -79,6 +81,9 @@ public void setSelectDocument(Document selectDocument){
         return selectDocument;
     }
     
-    
+    public Nouvelle getSelectNouvelle(){
+        return selectNouvelle;
+    }
+
 }
 

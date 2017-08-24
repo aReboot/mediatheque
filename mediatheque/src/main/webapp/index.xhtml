@@ -34,6 +34,8 @@
                 </h:outputText>
             </p:panel>
         </div>
+        
+           <p:link outcome="login" value="login" />
 
         <h:form id="ringImage">
             <div id="ringAffichageContenuMediatheque">
@@ -83,9 +85,33 @@
             </p:dialog>
 
         </h:form>
-
+ <br />
+  <br />
+   <br />
+      <br />
+         <br />
+          <br />
+            <br />
+         <div id="affichageNouvelle">
+            <h:form id="nouvelleForm">
+                <p:fieldset id="availableNouvelleField" legend="Nouvelles">
+                    <p:dataTable id="availableNouvelle" var="nouvelle" value="#{display.allNouvelles}" selectionMode="single" selection="#{display.selectNouvelle}"  rowKey="#{nouvelle.idNouvelle}" >
+        
+                <p:column headerText="Date">
+                    <h:outputText value="#{nouvelle.dateNouvelle}" />
+                </p:column>            
+                        
+                <p:column headerText="Nom">
+                    <h:outputText value="#{nouvelle.idUtilisateur.nom}" />
+                </p:column>        
+        
+                   </p:dataTable>        
+            </p:fieldset>     
         <br />
-        <p:link outcome="login" value="login" />
+     
+        
+        </h:form>
+     </div>    
     </h:body>
 </html>
 

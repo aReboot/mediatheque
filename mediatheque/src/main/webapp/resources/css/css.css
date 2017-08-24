@@ -45,5 +45,15 @@ div
 #ringAffichageContenuMediatheque
 {
     text-align: center;
+     display:block;
 }
 
+#availableNouvelle{
+     height:200px;
+     width:200px;
+     display:block;
+}
+
+#availableNouvelleField{
+    color: #09ff6d;
+}
