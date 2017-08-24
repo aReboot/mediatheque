@@ -8,7 +8,7 @@
     </h:head>
     <h:body>
         <h:form id="loginForm">
-            <p:inputText value="#{userConnexion.inputUser}" />
+            <p:inputText value="#{userConnexion.inputPseudo}" />
             <p:inputText value="#{userConnexion.inputPassword}" />
             <p:commandButton action="#{userConnexion.connexion()}" update="@all" />
         </h:form>
