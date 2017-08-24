@@ -11,9 +11,9 @@
     <h:body>
 
         <h:outputStylesheet library="css" name="css.css" />
-
-        <!--
+        
         <p:growl id="growl" showDetail="true" sticky="true"/>
+        <!--
         <ui:insert name="entete">
             <ui:include src="templates/tempEntete.xhtml" />
         </ui:insert>
@@ -97,6 +97,9 @@
                 <p:fieldset id="availableNouvelleField" legend="Nouvelles">
                     <p:dataTable id="availableNouvelle" var="nouvelle" value="#{display.allNouvelles}" selectionMode="single" selection="#{display.selectNouvelle}"  rowKey="#{nouvelle.idNouvelle}" >
         
+                               <p:ajax event="rowSelect" listener="#{Display.onRowSelect}" update="nouvelleForm:availableNouvelle,growl" />
+                        <p:ajax event="rowUnselect" listener="#{Display.onRowUnselect}" update="nouvelleForm:availableNouvelle,growl" />
+                        
                 <p:column headerText="Date">
                     <h:outputText value="#{nouvelle.dateNouvelle}" />
                 </p:column>            
@@ -107,8 +110,6 @@
         
                    </p:dataTable>        
             </p:fieldset>     
-        <br />
-     
         
         </h:form>
      </div>    

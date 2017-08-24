@@ -8,14 +8,18 @@ package controller;
 import access.DaoDocument;
 import access.DaoFicheLecture;
 import access.DaoNouvelle;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 import model.Document;
 import model.Fichelecture;
 import model.Nouvelle;
+import org.primefaces.event.UnselectEvent;
 
 /**
  *
@@ -35,6 +39,7 @@ public class Display implements Serializable {
     private Document selectDocument;
     private Nouvelle selectNouvelle;
     
+    private ExternalContext external;
 /*
 *########################################################################################
 #########################################################################################
@@ -53,6 +58,21 @@ public void setSelectNouvelle (Nouvelle selectNouvelle){
     this.selectNouvelle=selectNouvelle;
 }
     
+
+    //methode pour la data table afin de selectionner une ligne
+    public void onRowSelect() throws IOException {
+         external = FacesContext.getCurrentInstance().getExternalContext();
+         external.redirect("faces/ficheNouvelle.xhtml");
+    }
+ 
+    
+   public void onRowUnselect(UnselectEvent event) throws IOException {
+        external = FacesContext.getCurrentInstance().getExternalContext();
+         external.redirect("faces/ficheNouvelle.xhtml");
+   }
+
+
+
     
 /*
 *########################################################################################
