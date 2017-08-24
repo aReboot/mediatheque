@@ -86,7 +86,7 @@
 
         </h:form>
  <br />
-  <br />
+  <br />0
    <br />
       <br />
          <br />
@@ -94,7 +94,7 @@
             <br />
          <div id="affichageNouvelle">
             <h:form id="nouvelleForm">
-                <p:fieldset id="availableNouvelleField" legend="Nouvelles">
+                <p:fieldset id="availableNouvelleField" legend="Nouvelles" >
                     <p:dataTable id="availableNouvelle" var="nouvelle" value="#{display.allNouvelles}" selectionMode="single" selection="#{display.selectNouvelle}"  rowKey="#{nouvelle.idNouvelle}" >
         
                         <p:ajax event="rowSelect" listener="#{display.onRowSelect()}" update="nouvelleForm:availableNouvelle,growl" />

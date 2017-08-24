@@ -105,5 +105,9 @@ public void setSelectNouvelle (Nouvelle selectNouvelle){
         return selectNouvelle;
     }
 
+    public Nouvelle retrieveSelectNouvelle(){
+        return selectNouvelle;
+    }
+    
 }
 
